@@ -1,0 +1,312 @@
+﻿@page
+@model ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+<h2>@ViewData["Title"]</h2>
+
+@if  (!String.IsNullOrEmpty(@Model.error)) {<div class="alert alert-danger ">@Model.error</div>}
+<form class="form form-horizontal" method="post">
+  <div asp-validation-summary="All"></div>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.Name" class="col-md-3 right">Name:</label>
+          <div class="col-md-9">
+            <input asp-for="Contact.Name" class="form-control" />
+            <span asp-validation-for="Contact.Name"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.LastName" class="col-md-3 right">Last name:</label>
+          <div class="col-md-9">
+            <input asp-for="Contact.LastName" class="form-control" />
+            <span asp-validation-for="Contact.LastName"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.Email" class="col-md-3 right">Email:</label>
+          <div class="col-md-9">
+            <input asp-for="Contact.Email" class="form-control" />
+            <span asp-validation-for="Contact.Email"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.EmailConfirm" class="col-md-3 right">Confirm Email:</label>
+          <div class="col-md-9">
+            <input asp-for="Contact.EmailConfirm" class="form-control" />
+            <span asp-validation-for="Contact.EmailConfirm"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.Telephone" class="col-md-3 right">Telephone Number:</label>
+          <div class="col-md-9">
+            <input asp-for="Contact.Telephone" class="form-control" />
+            <span asp-validation-for="Contact.Telephone"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.Address" class="col-md-3 right">Address:</label>
+          <div class="col-md-9">
+            <input asp-for="Contact.Address" class="form-control" />
+            <span asp-validation-for="Contact.Address"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.City" class="col-md-3 right">City:</label>
+          <div class="col-md-9">
+            <input asp-for="Contact.City" class="form-control" />
+            <span asp-validation-for="Contact.City"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.Zip" class="col-md-3 right">Zip Code:</label>
+          <div class="col-md-9">
+            <input asp-for="Contact.Zip" class="form-control" />
+            <span asp-validation-for="Contact.Zip"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label asp-for="Contact.Felon" class="col-md-3 right">Have you ever comitted a felony?</label>
+        <div class="col-md-9">
+          <input asp-for="Contact.Felon" class="form-control" />
+          <span asp-validation-for="Contact.Felon"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label asp-for="Contact.FelonComment" class="col-md-3 right">If yes, please explain</label>
+        <div class="col-md-9">
+          <input asp-for="Contact.FelonComment" class="form-control" />
+          <span asp-validation-for="Contact.FelonComment"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+ <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label asp-for="Contact.DesiredPosition" class="col-md-3 right">Desired Position:</label>
+        <div class="col-md-9">
+          <input asp-for="Contact.DesiredPosition" class="form-control" />
+          <span asp-validation-for="Contact.DesiredPosition"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label asp-for="Contact.DesiredWage" class="col-md-3 right">Desired Wage:</label>
+        <div class="col-md-9">
+          <input asp-for="Contact.DesiredWage" class="form-control" />
+          <span asp-validation-for="Contact.DesiredWage"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.PreviousEmployer1" class="col-md-3 right">Previous Employer:</label>
+          <div class="col-md-9">
+            <input asp-for="Contact.PreviousEmployer1" class="form-control" />
+            <span asp-validation-for="Contact.PreviousEmployer1"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.PreviousTitle1" class="col-md-3 right">Previous Title:</label>
+          <div class="col-md-9">
+            <input asp-for="Contact.PreviousTitle1" class="form-control" />
+            <span asp-validation-for="Contact.PreviousTitle1"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.PreviousWage1" class="col-md-3 right">Previous Wage:</label>
+          <div class="col-md-9">
+            <input asp-for="Contact.PreviousWage1" class="form-control" />
+            <span asp-validation-for="Contact.PreviousWage1"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.PermissionContact1" class="col-md-3 right">Permission to contact:</label>
+          <div class="col-md-9">
+            <input asp-for="Contact.PermissionContact1" class="form-control" />
+            <span asp-validation-for="Contact.PermissionContact1"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="form-group">
+  <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.PreviousEmployer2" class="col-md-3 right">Previous Employer:</label>
+          <div class="col-md-9">
+            <input asp-for="Contact.PreviousEmployer2" class="form-control" />
+            <span asp-validation-for="Contact.PreviousEmployer2"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.PreviousTitle2" class="col-md-3 right">Previous Title:</label>
+          <div class="col-md-9">
+            <input asp-for="Contact.PreviousTitle2" class="form-control" />
+            <span asp-validation-for="Contact.PreviousTitle2"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.PreviousWage2" class="col-md-3 right">Previous Wage:</label>
+          <div class="col-md-9">
+            <input asp-for="Contact.PreviousWage2" class="form-control" />
+            <span asp-validation-for="Contact.PreviousWage2"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.PermissionContact2" class="col-md-3 right">Permission to contact:</label>
+          <div class="col-md-9">
+            <input asp-for="Contact.PermissionContact2" class="form-control" />
+            <span asp-validation-for="Contact.PermissionContact2"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="form-group">
+  <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.PreviousEmployer3" class="col-md-3 right">Previous Employer:</label>
+          <div class="col-md-9">
+            <input asp-for="Contact.PreviousEmployer3" class="form-control" />
+            <span asp-validation-for="Contact.PreviousEmployer3"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.PreviousTitle3" class="col-md-3 right">Previous Title:</label>
+          <div class="col-md-9">
+            <input asp-for="Contact.PreviousTitle3" class="form-control" />
+            <span asp-validation-for="Contact.PreviousTitle3"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.PreviousWage3" class="col-md-3 right">Previous Wage:</label>
+          <div class="col-md-9">
+            <input asp-for="Contact.PreviousWage3" class="form-control" />
+            <span asp-validation-for="Contact.PreviousWage3"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.PermissionContact3" class="col-md-3 right">Permission to contact:</label>
+          <div class="col-md-9">
+            <input asp-for="Contact.PermissionContact3" class="form-control" />
+            <span asp-validation-for="Contact.PermissionContact3"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label asp-for="Contact.Message" class="col-md-3 right">Additional Comments:</label>
+          <div class="col-md-9">
+            <textarea asp-for="Contact.Message" rows="6" class="form-control"></textarea>
+            <span asp-validation-for="Contact.Message"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+          <div class="col-md-12">
+            <div class="g-recaptcha" data-sitekey="@ViewData["ReCaptchaKey"]"></div>
+          </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <button type="submit">Submit</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+@section Scripts {
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+}
